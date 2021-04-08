@@ -18,7 +18,7 @@ const Movie = ({ title, poster_path, overview, vote_average}) => (
 
     <div className="movie">
            {/* if theres no image found then display pulp fiction 404 */}
-        <img src = {poster_path ? (images + poster_path) : 'https://cdn.dribbble.com/users/2353504/screenshots/7498453/media/6b9d2cecfe00f117222162cfd943e17d.gif'} alt = {title}/>
+        <img className="pulp-fiction" src = {poster_path ? (images + poster_path) : 'https://s4.koustavwifi.in/2020/11/Error-404.png'} alt = {title}/>
         <div className="movie-info">
 
             <h3>{title}</h3>
