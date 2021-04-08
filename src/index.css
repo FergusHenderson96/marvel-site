@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #22254b;
+  background-color: #222;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -17,19 +17,29 @@ body{
   flex-direction: column;
 }
 header{
-background-color: #373b69;
+background-color: #333;
 display: flex;
+flex-direction: row;
+align-items: center;
 padding: 16px;
-justify-content: flex-end;
+}
+.title{
+font-size: 50px;
+color: crimson;
+width: 80%;
+font-family: fantasy;
+text-shadow: 2px 2px #111;
+margin-left: 100px;
 }
 .search{
+  width: 300px;
   background-color: transparent;
-  border: 2px solid #22254b;
+  border: 2px solid #555;
   border-radius: 50px;
   color: #fff;
   font-family: inherit;
   font-size: 20px;
-  padding: 8px 24px;
+  
 }
 .search:focus{
   outline: 0;
@@ -78,7 +88,7 @@ justify-content: flex-end;
   transform: translateY(102%);
   transition: transform 0.3s ease-in-out;
 }
-.movie:hover .movie-over{
+.movie:active .movie-over{
 transform: translateY(0%);
 }
 .tag{
@@ -95,4 +105,27 @@ transform: translateY(0%);
 }
 .tag.red{
   color: red;
+}
+
+@media (max-width: 800px){
+  .search{
+    width: 200px;
+  }
+  .title{
+    margin-left: 50px;
+    font-size: 40px;
+  }
+  .movie:active .movie-over{
+    transform: translateY(0%);
+    }
+}
+
+@media (max-width: 500px){
+  .search{
+    width: 120px;
+  }
+  .title{
+    margin-left: 20px;
+    font-size: 30px;
+  }
 }
